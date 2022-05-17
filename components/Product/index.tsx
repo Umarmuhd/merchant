@@ -1,10 +1,17 @@
 import React from 'react';
+import { useCart } from '../../hooks/useCart';
 
 export const Product = (product) => {
   const { id, image, name, price } = product;
 
+  const { dispatch } = useCart();
+
   const buyProduct = () => {};
-  const addToCart = () => {};
+
+  const addToCart = () => {
+    dispatch({ type: 'addProduct', payload: product });
+    dispatch({ type: 'openMenu' });
+  };
   return (
     <article className="group relative">
       <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden lg:h-80 lg:aspect-none">

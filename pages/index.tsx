@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { Checkout } from '../components/Checkout';
 import Navbar from '../components/Navbar';
 import { Product } from '../components/Product';
-import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const products = [
@@ -38,6 +38,7 @@ export default function Home() {
         {products &&
           products.map((product) => <Product key={product.id} {...product} />)}
       </div>
+      <Checkout />
     </div>
   );
 }
