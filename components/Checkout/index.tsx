@@ -19,11 +19,7 @@ export const Checkout = () => {
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed inset-0 overflow-hidden"
-        onClose={handleOpenMenu}
-      >
+      <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={handleOpenMenu}>
         <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
@@ -52,7 +48,7 @@ export const Checkout = () => {
                   <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                     <div className="flex items-start justify-between">
                       <Dialog.Title className="text-lg font-medium text-gray-900">
-                        Koszyk
+                        Shopping Cart
                       </Dialog.Title>
                       <div className="ml-3 h-7 flex items-center">
                         <button
@@ -71,8 +67,8 @@ export const Checkout = () => {
                   </div>
                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
-                      <p>Razem:</p>
-                      <p>{totalPrice / 100} zł</p>
+                      <p>Total price:</p>
+                      <p>{totalPrice}</p>
                     </div>
 
                     <div className="mt-6">
