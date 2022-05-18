@@ -114,9 +114,9 @@ export const Footer = () => {
         <p className="text-sm text-gray-600">© Copyright 2020 Lorem Inc. All rights reserved.</p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
-            <Link href="/">
+            <Link href="/track-order">
               <a className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                F.A.Q
+                Track Order
               </a>
             </Link>
           </li>
