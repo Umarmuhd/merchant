@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import notion from '../../utils/notion';
 
-let NOTION_MENU_DB_ID = '08aada5817794ae19f802282e2eea74a';
+let NOTION_MENU_DB_ID = 'f57cf6ebb20f4e12a47e00f0f8b9a2e0';
 
 async function getMenu() {
   const menu = [];
@@ -12,9 +12,9 @@ async function getMenu() {
   dbResponse.results.forEach((item) => {
     const menuItem = {
       id: item.id,
-      name: item.properties?.name?.title[0]?.plain_text,
-      image: item.properties?.image?.files[0]?.file.url,
-      price: item.properties?.price?.number,
+      name: item.properties?.['Product Name']?.title[0]?.plain_text,
+      image: item.properties?.['Product Image']?.files[0]?.file.url,
+      price: item.properties?.Price?.number,
       item_tags: [],
     };
 
