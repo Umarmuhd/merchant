@@ -31,7 +31,9 @@ async function getMenu() {
   return menu;
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const products = async (req: NextApiRequest, res: NextApiResponse) => {
   const products = await getMenu();
   res.status(200).json({ name: 'John Doe', data: { products } });
 };
+
+export default products;
