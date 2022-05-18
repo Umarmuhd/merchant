@@ -1,26 +1,26 @@
-import { NOTION_ACCESS_TOKEN } from '../constants';
+import { NOTION_ACCESS_TOKEN } from "../constants";
 
-const { Client } = require('@notionhq/client');
+const { Client } = require("@notionhq/client");
 
 const notion = new Client({ auth: NOTION_ACCESS_TOKEN });
 
-let NOTION_MENU_DB_ID = '';
-let NOTION_ORDERS_DB_ID = '';
+let NOTION_MENU_DB_ID = "";
+let NOTION_ORDERS_DB_ID = "";
 
 async function getDbIdsAsync() {
   const dbResponse = await notion.search({
     filter: {
-      value: 'database',
-      property: 'object',
+      value: "database",
+      property: "object",
     },
   });
 
   dbResponse.results.forEach((db: any) => {
     switch (db.title[0].text.content) {
-      case 'Menu':
+      case "Menu":
         NOTION_MENU_DB_ID = db.id;
         break;
-      case 'Orders':
+      case "Orders":
         NOTION_ORDERS_DB_ID = db.id;
         break;
     }
@@ -30,7 +30,5 @@ async function getDbIdsAsync() {
 }
 
 getDbIdsAsync();
-
-console.log('here');
 
 export default notion;
