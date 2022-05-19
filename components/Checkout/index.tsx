@@ -1,8 +1,9 @@
-import { Dispatch, Fragment, SetStateAction } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
-import { useCart } from '../../hooks/useCart';
-import { CartItems } from '../Cart/CartItems';
+import { Dispatch, Fragment, SetStateAction } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { XIcon } from "@heroicons/react/outline";
+import { useCart } from "../../hooks/useCart";
+import { CartItems } from "../Cart/CartItems";
+import { useRouter } from "next/router";
 
 export const Checkout = () => {
   const {
@@ -10,11 +11,14 @@ export const Checkout = () => {
     dispatch,
   } = useCart();
 
-  const handleOpenMenu = () => dispatch({ type: 'openMenu' });
-  const handleCloseMenu = () => dispatch({ type: 'closeMenu' });
+  const handleOpenMenu = () => dispatch({ type: "openMenu" });
+  const handleCloseMenu = () => dispatch({ type: "closeMenu" });
+
+  const router = useRouter();
 
   const handleCheckout = () => {
     console.log(products);
+    router.push("/checkout");
   };
 
   return (
@@ -77,7 +81,7 @@ export const Checkout = () => {
                           onClick={handleCheckout}
                           className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                         >
-                          Do kasy
+                          Complete checkout
                         </button>
                       ) : null}
                     </div>

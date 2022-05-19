@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { SearchCircleIcon, ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/solid';
+import { useState } from "react";
+import { SearchCircleIcon, ShoppingBagIcon, ShoppingCartIcon } from "@heroicons/react/solid";
 
-import { useCart } from '../hooks/useCart';
-import Link from 'next/link';
+import { useCart } from "../hooks/useCart";
+import Link from "next/link";
 
 const SearchIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,11 +31,23 @@ const Navbar = () => {
     dispatch,
   } = useCart();
 
-  const handleOpenMenu = () => dispatch({ type: 'openMenu' });
+  const handleOpenMenu = () => dispatch({ type: "openMenu" });
 
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
+      <div className="relative flex grid items-center grid-cols-3 lg:grid-cols-3">
+        <div className="flow-root md:hidden">
+          <button onClick={handleOpenMenu} className="group -m-2 p-2 flex items-center">
+            <ShoppingBagIcon
+              className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+              aria-hidden="true"
+            />
+            <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+              {products?.length ?? 0}
+            </span>
+            <span className="sr-only">items in cart, view bag</span>
+          </button>
+        </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <div className="flex flex-row items-center justify-between mr-4">
@@ -45,7 +57,7 @@ const Navbar = () => {
               <input
                 type="search"
                 className="border border-grey_80 px-4 h-10 placeholder-grey_80 text-grey_40 bg-white shadow-sm focus:outline-none w-full rounded-[100px] scale-x-0 origin-top-right ml-2 peer-focus:scale-x-100 focus:scale-x-100"
-                style={{ transition: 'all 0.15s ease 0s' }}
+                style={{ transition: "all 0.15s ease 0s" }}
                 id="search"
                 placeholder="Search..."
               />
@@ -91,7 +103,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="ml-auto lg:hidden">
-          <button
+          {/* <button
             aria-label="Open Menu"
             title="Open Menu"
             className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
@@ -111,6 +123,9 @@ const Navbar = () => {
                 d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
               />
             </svg>
+          </button> */}
+          <button className="flex items-center justify-center bg-primary_brand_lightest hover:bg-slate-200 transition duration-150 p-3 rounded-full peer text-red-600">
+            <SearchIcon />
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full">
