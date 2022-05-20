@@ -1,5 +1,5 @@
-import React from 'react';
-import { useCart } from '../../hooks/useCart';
+import React from "react";
+import { useCart } from "@/hooks/useCart";
 
 export const Product = (product) => {
   const { id, image, name, price } = product;
@@ -9,8 +9,8 @@ export const Product = (product) => {
   const buyProduct = () => {};
 
   const addToCart = () => {
-    dispatch({ type: 'addProduct', payload: product });
-    dispatch({ type: 'openMenu' });
+    dispatch({ type: "addProduct", payload: product });
+    dispatch({ type: "openMenu" });
   };
   return (
     <article className="group relative">

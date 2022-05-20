@@ -1,11 +1,19 @@
 {
-  "compilerOptions": {
+  "compilerOptions": { 
+    "baseUrl": ".",
+    "paths": {
+      "@/prisma/*": ["prisma/*"],
+      "@/components/*": ["src/components/*"],
+      "@/config/*": ["src/config/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/providers/*": ["src/providers/*"],
+      "@/sections/*": ["src/sections/*"],
+      "@/styles/*": ["src/styles/*"]
+    },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -17,14 +25,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "sourceMap": true,
+    "outDir": "dist"
   },
-  "include": [
+  "include": [    
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": [    
+    "node_modules" 
+  ]  
 }

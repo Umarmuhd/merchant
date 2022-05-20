@@ -1,7 +1,7 @@
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "@/hooks/useCart";
 import { CartItems } from "../Cart/CartItems";
 import { useRouter } from "next/router";
 

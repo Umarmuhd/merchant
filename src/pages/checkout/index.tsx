@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { CartItems } from "../../components/Cart/CartItems";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "@/hooks/useCart";
 import random from "../../utils/random";
-import { useScript } from "../../hooks/useScript";
+import { useScript } from "@/hooks/useScript";
 import { BackspaceIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SearchCircleIcon, ShoppingBagIcon, ShoppingCartIcon } from "@heroicons/react/solid";
 
-import { useCart } from "../hooks/useCart";
+import { useCart } from "@/hooks/useCart";
 import Link from "next/link";
 
 const SearchIcon = () => (
