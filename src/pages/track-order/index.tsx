@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
-import { Footer } from '../../components/Footer';
-import Navbar from '../../components/Navbar';
+import Link from "next/link";
+import React from "react";
+import { Footer } from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 export default function TrackOrder() {
   return (
@@ -35,7 +35,7 @@ export default function TrackOrder() {
                   </defs>
                   <rect fill="url(#5dc90b42-5ed4-45a6-8e63-2d78ca9d3d95)" width="52" height="24" />
                 </svg>
-              </span>{' '}
+              </span>{" "}
               Order Pending
             </h2>
             <p className="text-base text-gray-700 md:text-lg">#123456ABCD</p>

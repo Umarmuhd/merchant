@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { useCart } from '../../hooks/useCart';
+import Image from "next/image";
+import { useCart } from "@/hooks/useCart";
 
 type Product = {
   id: number;
@@ -15,7 +15,7 @@ export const CartItem = (product: CartItemProps) => {
   const { dispatch } = useCart();
 
   const handleDelete = (product: Product) => {
-    dispatch({ type: 'deleteProduct', payload: product });
+    dispatch({ type: "deleteProduct", payload: product });
   };
 
   return (
