@@ -85,6 +85,14 @@ export const Checkout = () => {
                         </button>
                       ) : null}
                     </div>
+                    <div className="mt-2">
+                      <button
+                        onClick={handleCheckout}
+                        className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-indigo-700"
+                      >
+                        Checkout With Checkgate
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
