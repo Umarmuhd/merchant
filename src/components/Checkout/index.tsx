@@ -4,6 +4,7 @@ import { XIcon } from "@heroicons/react/outline";
 import { useCart } from "@/hooks/useCart";
 import { CartItems } from "../Cart/CartItems";
 import { useRouter } from "next/router";
+import { useScript } from "@/hooks/useScript";
 
 export const Checkout = () => {
   const {
@@ -19,6 +20,12 @@ export const Checkout = () => {
   const handleCheckout = () => {
     console.log(products);
     router.push("/checkout");
+  };
+
+  useScript("http://127.0.0.1:5500/sdk/src/main.js");
+
+  const handlePayment = () => {
+    checkgateCheckout({ amount: totalPrice, to: "lorem", products });
   };
 
   return (
@@ -87,7 +94,7 @@ export const Checkout = () => {
                     </div>
                     <div className="mt-2">
                       <button
-                        onClick={handleCheckout}
+                        onClick={handlePayment}
                         className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-indigo-700"
                       >
                         Checkout With Checkgate

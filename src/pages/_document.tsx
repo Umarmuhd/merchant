@@ -1,4 +1,4 @@
-import Document, { Head, Main, Html, NextScript, DocumentContext } from 'next/document';
+import Document, { Head, Main, Html, NextScript, DocumentContext } from "next/document";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
         <Head></Head>
         <body className="h-full">
           <Main />
+          <div id="checkgate" to="wallet_122"></div>
           <NextScript />
         </body>
       </Html>

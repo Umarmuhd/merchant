@@ -6,6 +6,7 @@ export const useScript = (url) => {
 
     script.src = url;
     script.async = true;
+    script.crossOrigin = "*";
 
     document.body.appendChild(script);
 
