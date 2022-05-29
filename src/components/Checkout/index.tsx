@@ -25,7 +25,7 @@ export const Checkout = () => {
   useScript("http://127.0.0.1:5500/sdk/src/main.js");
 
   const handlePayment = () => {
-    checkgateCheckout({ amount: totalPrice, to: "lorem", products });
+    checkgateCheckout({ amount: totalPrice, products });
   };
 
   return (
