@@ -6,7 +6,7 @@ export const useScript = (url) => {
 
     script.src = url;
     script.async = true;
-    script.crossOrigin = "*";
+    script.crossOrigin = "https://payme.checkgate.ml";
 
     document.body.appendChild(script);
 
