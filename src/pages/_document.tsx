@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
         <Head></Head>
         <body className="h-full">
           <Main />
+          {/* @ts-ignore */}
           <div id="checkgate" to="8v0slco549"></div>
           <NextScript />
         </body>

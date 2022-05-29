@@ -22,9 +22,10 @@ export const Checkout = () => {
     router.push("/checkout");
   };
 
-  useScript("http://127.0.0.1:5500/sdk/src/main.js");
+  useScript("https://payme.checkgate.ml/main.js");
 
   const handlePayment = () => {
+    // @ts-ignore
     checkgateCheckout({ amount: totalPrice, products });
   };
 
