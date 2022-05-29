@@ -6,7 +6,8 @@ export const useScript = (url) => {
 
     script.src = url;
     script.async = true;
-    script.crossOrigin = "https://payme.checkgate.ml";
+    script.crossOrigin = "*";
+    script.setAttribute("Access-Control-Allow-Origin", "*");
 
     document.body.appendChild(script);
 
