@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
         <body className="h-full">
           <Main />
           {/* @ts-ignore */}
-          <div id="checkgate" to="8v0slco549"></div>
+          <div id="checkgate" to="io8jxk8dr4"></div>
           <NextScript />
         </body>
       </Html>

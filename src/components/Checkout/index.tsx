@@ -22,7 +22,7 @@ export const Checkout = () => {
     router.push("/checkout");
   };
 
-  useScript("https://payme.checkgate.ml/main.js");
+  useScript("http://127.0.0.1:5500/sdk/src/main.js");
 
   const handlePayment = () => {
     // @ts-ignore

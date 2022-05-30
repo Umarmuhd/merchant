@@ -7,7 +7,6 @@ export const useScript = (url) => {
     script.src = url;
     script.async = true;
     script.crossOrigin = "*";
-    script.setAttribute("Access-Control-Allow-Origin", "*");
 
     document.body.appendChild(script);
 
